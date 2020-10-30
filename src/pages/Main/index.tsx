@@ -4,12 +4,12 @@ import { View, Text } from 'react-native';
 // import { Container } from './styles';
 import AppThemeUtils from '../../utils/appUtils';
 
-const Dashboard: React.FC = () => {
+const Main: React.FC = () => {
   return (
     <View style={{ flex: 1, backgroundColor: AppThemeUtils.colorPrimary }}>
-      <Text>Dashboard</Text>
+      <Text>asd</Text>
     </View>
   );
 };
 
-export default Dashboard;
+export default Main;
