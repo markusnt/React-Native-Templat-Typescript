@@ -10,7 +10,7 @@ const colorGreenLight = '#55BB9D';
 const colorRedLight = '#F2A5A5';
 const colorTextLight = '#8A7776';
 
-const colorSuccess = '#A0F41a';
+const colorSuccess = '#00A95A';
 const colorError = 'red';
 
 export default {
