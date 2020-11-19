@@ -1,27 +1,16 @@
-const colorPrimary = '#00A95A';
-const colorPrimaryDark = '#00A95A';
-const colorPrimarylight = '#00A95A';
+const colorPrimary = '#15549a';
+const colorPrimaryDark = '#002c6b';
+const colorPrimaryLight = '#5580cb';
 
-const colorSecundary = '#A3A3A3';
-
-const iconColor = '#000000';
-
-const colorGreenLight = '#55BB9D';
-const colorRedLight = '#F2A5A5';
-const colorTextLight = '#8A7776';
-
-const colorSuccess = '#00A95A';
-const colorError = 'red';
+const colorSecundary = '#f51f8a';
+const colorSecundaryDark = '#bd005d';
+const colorSecundaryLight = '#ff64ba';
 
 export default {
   colorPrimary,
   colorPrimaryDark,
-  colorPrimarylight,
+  colorPrimaryLight,
   colorSecundary,
-  iconColor,
-  colorGreenLight,
-  colorRedLight,
-  colorTextLight,
-  colorSuccess,
-  colorError,
+  colorSecundaryDark,
+  colorSecundaryLight,
 };

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import AppThemeUtils from '../../utils/appUtils';
+
+import { Text, TouchableOpacity } from 'react-native';
 
 import {
   Container,
@@ -17,15 +17,13 @@ interface AlertProps {
   show: boolean;
   title: string;
   message: string;
-  footer: string;
   buttons: Record<string, any>;
 }
 
-const Alert: React.FC<AlertProps> = ({
+const AlertFooter: React.FC<AlertProps> = ({
   show,
   title,
   message,
-  footer,
   buttons,
   ...rest
 }) => {
@@ -33,39 +31,11 @@ const Alert: React.FC<AlertProps> = ({
     return (
       <Container {...rest}>
         <AlertView>
-          {/* <CloseView>
-          <TouchableOpacity>
-            <Icon name="clear" size={20} color="#333333" />
-          </TouchableOpacity>
-        </CloseView> */}
-          <View
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginTop: -50,
-            }}
-          >
-            <Icon
-              name="done"
-              size={35}
-              color="#fff"
-              style={{
-                backgroundColor: AppThemeUtils.colorPrimaryDark,
-                borderRadius: 50,
-                padding: 20,
-              }}
-            />
-          </View>
-          <TextView style={{ paddingBottom: 10 }}>
-            <Text
-              style={{
-                textAlign: 'center',
-                fontSize: 26,
-              }}
-            >
-              {title}
-            </Text>
-          </TextView>
+          <CloseView>
+            <TouchableOpacity>
+              <Icon name="clear" size={20} color="#333333" />
+            </TouchableOpacity>
+          </CloseView>
           <TextView>
             <Text style={{ textAlign: 'center' }}>{message}</Text>
           </TextView>
@@ -76,7 +46,7 @@ const Alert: React.FC<AlertProps> = ({
                   width:
                     buttons.length !== 1
                       ? `${100 / buttons.length - 5}%`
-                      : '100%',
+                      : '40%',
                 }}
               >
                 <Button onPress={item.action}>
@@ -94,4 +64,4 @@ const Alert: React.FC<AlertProps> = ({
   return null;
 };
 
-export default Alert;
+export default AlertFooter;

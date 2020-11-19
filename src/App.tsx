@@ -10,8 +10,8 @@ import './config/ReactotronConfig.js';
 
 const App: React.FC = () => (
   <NavigationContainer>
-    <StatusBar barStyle="light-content" backgroundColor="#312e38" />
-    <View style={{ flex: 1, backgroundColor: '#312e38' }}>
+    <StatusBar barStyle="dark-content" backgroundColor="#d0d0d0" />
+    <View style={{ flex: 1, backgroundColor: '#f0f0f0' }}>
       <Routes />
     </View>
   </NavigationContainer>
