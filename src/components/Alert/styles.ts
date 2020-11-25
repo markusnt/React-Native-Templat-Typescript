@@ -36,7 +36,7 @@ export const Button = styled.TouchableOpacity`
   background-color: ${AppThemeUtils.colorPrimary};
   padding: 10px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 50px;
 `;
 
 export const TextView = styled.View`

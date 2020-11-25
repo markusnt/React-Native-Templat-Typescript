@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 import AppThemeUtils from '../../utils/appUtils';
 
 export const Container = styled.View`
@@ -17,6 +18,7 @@ export const AlertView = styled.View`
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   position: absolute;
+  padding: 16px 0 ${16 + getBottomSpace()}px;
   bottom: 0;
 `;
 
@@ -40,7 +42,7 @@ export const ButtonView = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 10px 5px 10px;
 `;
 
 export const Button = styled.TouchableOpacity`

@@ -17,7 +17,6 @@ interface AlertProps {
   show: boolean;
   title: string;
   message: string;
-  footer: string;
   buttons: Record<string, any>;
 }
 
@@ -25,7 +24,6 @@ const Alert: React.FC<AlertProps> = ({
   show,
   title,
   message,
-  footer,
   buttons,
   ...rest
 }) => {
@@ -72,6 +70,7 @@ const Alert: React.FC<AlertProps> = ({
           <ButtonsView>
             {buttons.map((item: any) => (
               <ButtonView
+                key={item.text}
                 style={{
                   width:
                     buttons.length !== 1

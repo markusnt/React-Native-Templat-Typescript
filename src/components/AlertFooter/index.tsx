@@ -1,4 +1,6 @@
 import React from 'react';
+// import { useSelector } from 'react-redux';
+
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { Text, TouchableOpacity } from 'react-native';
@@ -15,7 +17,7 @@ import {
 
 interface AlertProps {
   show: boolean;
-  title: string;
+  title?: string;
   message: string;
   buttons: Record<string, any>;
 }
@@ -27,21 +29,34 @@ const AlertFooter: React.FC<AlertProps> = ({
   buttons,
   ...rest
 }) => {
+  // const { content } = useSelector((state: any) => state.alert);
+
   if (show) {
     return (
       <Container {...rest}>
         <AlertView>
-          <CloseView>
+          {/* <CloseView>
             <TouchableOpacity>
               <Icon name="clear" size={20} color="#333333" />
             </TouchableOpacity>
-          </CloseView>
+          </CloseView> */}
+          <TextView style={{ paddingBottom: 5 }}>
+            <Text
+              style={{
+                textAlign: 'center',
+                fontSize: 20,
+              }}
+            >
+              {title}
+            </Text>
+          </TextView>
           <TextView>
             <Text style={{ textAlign: 'center' }}>{message}</Text>
           </TextView>
           <ButtonsView>
             {buttons.map((item: any) => (
               <ButtonView
+                key={item.text}
                 style={{
                   width:
                     buttons.length !== 1

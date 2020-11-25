@@ -5,13 +5,12 @@ import { Container, ButtonText } from './styles';
 import AppThemeUtils from '../../utils/appUtils';
 
 interface ButtonProps extends RectButtonProperties {
-  title: string;
-  outline: boolean;
+  children: string;
+  outline?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ title, outline, ...rest }) => (
+const Button: React.FC<ButtonProps> = ({ children, outline, ...rest }) => (
   <Container
-    elevation={20}
     {...rest}
     style={
       outline
@@ -24,7 +23,9 @@ const Button: React.FC<ButtonProps> = ({ title, outline, ...rest }) => (
         : null
     }
   >
-    <ButtonText style={outline ? { color: '#000' } : null}>{title}</ButtonText>
+    <ButtonText style={outline ? { color: '#000' } : null}>
+      {children}
+    </ButtonText>
   </Container>
 );
 

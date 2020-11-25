@@ -6,6 +6,8 @@ const colorSecundary = '#f51f8a';
 const colorSecundaryDark = '#bd005d';
 const colorSecundaryLight = '#ff64ba';
 
+const colorGrey = '#666360';
+
 export default {
   colorPrimary,
   colorPrimaryDark,
@@ -13,4 +15,5 @@ export default {
   colorSecundary,
   colorSecundaryDark,
   colorSecundaryLight,
+  colorGrey,
 };

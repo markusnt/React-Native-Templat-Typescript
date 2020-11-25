@@ -4,9 +4,9 @@ import AppThemeUtils from '../../utils/appUtils';
 
 export const Container = styled.TouchableOpacity`
   width: 100%;
-  height: 60px;
+  height: 50px;
   background: ${AppThemeUtils.colorPrimary};
-  border-radius: 10px;
+  border-radius: 50px;
   margin-top: 8px;
   justify-content: center;
   align-items: center;
