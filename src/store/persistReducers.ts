@@ -1,16 +1,14 @@
 import AsyncStorage from '@react-native-community/async-storage';
-import {persistReducer} from 'redux-persist';
+import { persistReducer } from 'redux-persist';
 
-export default reducers => {
+export default (reducers: any) => {
   const persistedReducer = persistReducer(
     {
-      key: 'react_native_template',
+      key: 'brp_app',
       storage: AsyncStorage,
-      whitelist: [
-        'auth',
-      ],
+      whitelist: ['auth'],
     },
-    reducers
+    reducers,
   );
   return persistedReducer;
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
@@ -29,8 +29,6 @@ const AlertFooter: React.FC<AlertProps> = ({
   buttons,
   ...rest
 }) => {
-  // const { content } = useSelector((state: any) => state.alert);
-
   if (show) {
     return (
       <Container {...rest}>

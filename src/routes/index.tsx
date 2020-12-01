@@ -24,17 +24,6 @@ const Routes: React.FC = () => {
   return (
     <>
       {statusLoading ? <Loading /> : null}
-      <AlertFooter
-        show={false}
-        title="Concluido"
-        message="Abertura do botão realizada com sucesso!"
-        buttons={[
-          {
-            text: 'Fechar',
-            // action: () => console.log('teste'),
-          },
-        ]}
-      />
       <AppRoutes />
       {/* return user ? <AppRoutes /> : <AuthRoutes />; */}
     </>

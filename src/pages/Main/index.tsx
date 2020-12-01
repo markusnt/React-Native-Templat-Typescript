@@ -1,17 +1,18 @@
 import React, { useRef, useCallback } from 'react';
 import {
-  Image,
   View,
   ScrollView,
   KeyboardAvoidingView,
   Platform,
   TextInput,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/Feather';
+import { useSelector } from 'react-redux';
+
 import { useNavigation } from '@react-navigation/native';
 import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
 import * as Yup from 'yup';
+import { StoreState } from '../../store/createStore';
 
 import api from '../../services/api';
 
@@ -69,6 +70,10 @@ const Main: React.FC = () => {
       }
     },
     [navigation],
+  );
+
+  const { loadingSignInRequest, isSignedIn, error, token } = useSelector(
+    (state: StoreState) => state.auth,
   );
 
   return (

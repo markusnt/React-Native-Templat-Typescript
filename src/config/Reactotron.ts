@@ -1,17 +1,27 @@
 import Reactotron from 'reactotron-react-native';
 import { reactotronRedux } from 'reactotron-redux';
-import reactotronSaga from 'reactotron-redux-saga';
+import sagaPlugin from 'reactotron-redux-saga';
 import AsyncStorage from '@react-native-community/async-storage';
+
+declare global {
+  interface Console {
+    tron: any;
+  }
+}
+
+interface PluginConfig {
+  except?: string[];
+}
 
 if (__DEV__) {
   const tron = Reactotron.setAsyncStorageHandler(AsyncStorage)
     .configure({ host: '10.7.2.105' })
     .useReactNative()
     .use(reactotronRedux())
-    .use(reactotronSaga())
+    .use(sagaPlugin({ except: [''] }))
     .connect();
 
-  tron.clear();
+  tron.clear!();
 
   console.tron = tron;
 }
